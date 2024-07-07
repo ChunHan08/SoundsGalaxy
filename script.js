@@ -1,12 +1,12 @@
 let fft
 
-let Particle = function(position) {
+let Particle = function(position) { 
   this.position = position
   this.speed = createVector(0, 1)
   this.color = [random(0, 255), random(0,255), random(0,255)]
 
   this.draw = function() {
-    Circle(
+    ellipse(
       this.position.x, this.position.y,
        this.diameter, this.diameter
     )
@@ -20,6 +20,7 @@ let Particle = function(position) {
     this.diameter = random(5, 7) + (energy * 100)
   }
 }
+
 function setup () {
   createCanvas(windowWidth, windowHeight)
   noStroke()
